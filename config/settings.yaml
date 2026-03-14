@@ -1,1 +1,48 @@
+app:
+  name: devops-ai-product-owner
+  environment: local
+  debug: true
 
+llm:
+  provider: azure_openai
+  model: gpt-4o
+  temperature: 0.2
+  max_tokens: 2000
+
+team:
+  name: platform-engineering
+  team_size: 4
+  sprint_length_days: 14
+
+backlog:
+  default_priority: medium
+  allowed_priorities:
+    - high
+    - medium
+    - low
+
+repo:
+  platform: github
+  owner: your-github-username
+  repository: devops-ai-product-owner
+
+integrations:
+  github:
+    enabled: true
+    create_epics: true
+    create_stories: true
+
+  gitlab:
+    enabled: false
+    create_epics: true
+    create_stories: true
+
+features:
+  generate_epics: true
+  generate_stories: true
+  generate_tasks: true
+  sprint_planning: false
+  standup_summary: false
+
+logging:
+  level: INFO
