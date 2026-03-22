@@ -23,7 +23,7 @@ backlog:
 
 repo:
   platform: github
-  owner: your-github-username
+  owner: sundbgit
   repository: devops-ai-product-owner
 
 integrations:
