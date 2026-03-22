@@ -48,5 +48,15 @@ Successfully installed pip-26.0.1
 
 ~~~
 
-After the basic setup, add an Open API key in the .env file and the model name.
+After the basic setup, add an Open API key in the .env file and the model name. 
+
+The .env should look like. DO not check in to github. use .gitignore 
+
+~~~
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
+OPENAI_MODEL=gpt-4o-mini
+~~~
+
+To create Open API key - Navigate to https://platform.openai.com/ and Create new secret key. Keep the details as default and permissions as default which we can change later. PLease add billing details with as low as 5$ for the basic tests. We can add once you need more :)
+
 
