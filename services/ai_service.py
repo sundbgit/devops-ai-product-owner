@@ -1,42 +1,23 @@
-
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
-from openai import AzureOpenAI
 
 load_dotenv()
 
 
 class AIService:
-    """
-    Handles interaction with Azure OpenAI
-    """
 
     def __init__(self):
-
-        self.client = AzureOpenAI(
-            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-            api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT")
-        )
-
-        self.deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
     def generate_response(self, system_prompt: str, user_prompt: str, temperature: float = 0.2):
-        """
-        Send prompt to Azure OpenAI and return response
-        """
 
         response = self.client.chat.completions.create(
-            model=self.deployment,
+            model=self.model,
             messages=[
-                {
-                    "role": "system",
-                    "content": system_prompt
-                },
-                {
-                    "role": "user",
-                    "content": user_prompt
-                }
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
             ],
             temperature=temperature
         )
