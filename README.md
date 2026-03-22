@@ -62,4 +62,195 @@ GITHUB_REPO=Provide your repo name
 
 To create Open API key - Navigate to https://platform.openai.com/ and Create new secret key. Keep the details as default and permissions as default which we can change later. PLease add billing details with as low as 5$ for the basic tests. We can add once you need more :)
 
+~~~
+
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % python scripts/run_mvp.py
+/Users/sunilpoojary/devops-product-owner/devops-ai-product-owner/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+DevOps AI Product Owner - MVP
+
+Loading meeting notes...
+Generating backlog using AI Product Owner...
+
+Raw AI Output:
+
+{
+  "epics": [
+    {
+      "title": "AKS Upgrade",
+      "description": "Upgrade the AKS cluster to the latest Kubernetes version to ensure compliance and support.",
+      "stories": [
+        {
+          "title": "Plan AKS Cluster Upgrade Strategy",
+          "description": "Develop a detailed plan for upgrading the AKS cluster from version 1.31 to 1.32, including timelines and resource allocation.",
+          "priority": "High",
+          "tasks": [
+            "Review Microsoft deprecation timelines",
+            "Identify application compatibility requirements",
+            "Draft upgrade strategy document"
+          ]
+        },
+        {
+          "title": "Verify Application Compatibility",
+          "description": "Ensure that all applications running on the AKS cluster are compatible with Kubernetes version 1.32.",
+          "priority": "High",
+          "tasks": [
+            "Run compatibility tests on all applications",
+            "Document any compatibility issues",
+            "Coordinate with application teams for fixes"
+          ]
+        },
+        {
+          "title": "Review Helm Charts for Deprecated APIs",
+          "description": "Audit existing Helm charts for deprecated APIs that may affect the upgrade process.",
+          "priority": "Medium",
+          "tasks": [
+            "List all Helm charts in use",
+            "Identify deprecated APIs in each chart",
+            "Update Helm charts to remove deprecated APIs"
+          ]
+        },
+        {
+          "title": "Test Upgrade Process in Development Environment",
+          "description": "Conduct a test upgrade of the AKS cluster in a development environment to validate the upgrade process.",
+          "priority": "High",
+          "tasks": [
+            "Set up a development AKS cluster",
+            "Perform the upgrade to version 1.32",
+            "Document the upgrade process and any issues encountered"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CI Pipeline Stability",
+      "description": "Improve the stability of CI pipelines to reduce failures and enhance developer productivity.",
+      "stories": [
+        {
+          "title": "Investigate Flaky CI Tests",
+          "description": "Analyze the CI pipeline to identify and resolve flaky integration tests causing intermittent failures.",
+          "priority": "High",
+          "tasks": [
+            "Run test reports to identify flaky tests",
+            "Review test code for potential issues",
+            "Refactor or rewrite flaky tests"
+          ]
+        },
+        {
+          "title": "Improve Pipeline Retry Logic",
+          "description": "Enhance the retry logic in CI pipelines to handle transient failures more effectively.",
+          "priority": "Medium",
+          "tasks": [
+            "Review current retry logic implementation",
+            "Implement exponential backoff strategy",
+            "Test new retry logic in CI environment"
+          ]
+        },
+        {
+          "title": "Stabilize CI Workflow",
+          "description": "Make necessary adjustments to the CI workflow to ensure consistent execution and reliability.",
+          "priority": "Medium",
+          "tasks": [
+            "Review CI workflow configurations",
+            "Identify bottlenecks in the workflow",
+            "Implement improvements based on findings"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Infrastructure as Code Refactoring",
+      "description": "Refactor Terraform modules to enhance maintainability and usability.",
+      "stories": [
+        {
+          "title": "Refactor Terraform Networking Modules",
+          "description": "Simplify and improve the existing Terraform modules used for networking infrastructure.",
+          "priority": "High",
+          "tasks": [
+            "Review current networking module structure",
+            "Implement modular design principles",
+            "Update documentation for new module structure"
+          ]
+        },
+        {
+          "title": "Refactor Terraform AKS Infrastructure Modules",
+          "description": "Refactor the Terraform modules used for provisioning AKS infrastructure to improve readability and reuse.",
+          "priority": "High",
+          "tasks": [
+            "Analyze existing AKS modules for complexity",
+            "Introduce variable validation for inputs",
+            "Create comprehensive documentation for modules"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Monitoring and Observability Improvements",
+      "description": "Enhance monitoring configurations to reduce alert noise and improve actionable insights.",
+      "stories": [
+        {
+          "title": "Review Monitoring Alert Thresholds",
+          "description": "Assess and adjust alert thresholds to minimize excessive alerts and focus on actionable notifications.",
+          "priority": "High",
+          "tasks": [
+            "Compile list of current alert thresholds",
+            "Analyze alert frequency and impact",
+            "Adjust thresholds based on analysis"
+          ]
+        },
+        {
+          "title": "Remove Redundant Alerts",
+          "description": "Identify and eliminate redundant alerts from the monitoring system to reduce alert fatigue.",
+          "priority": "Medium",
+          "tasks": [
+            "Review all active alerts",
+            "Identify alerts that overlap or provide no value",
+            "Document and remove redundant alerts"
+          ]
+        },
+        {
+          "title": "Introduce Better Severity Classifications",
+          "description": "Implement a more effective classification system for alerts to prioritize response efforts.",
+          "priority": "Medium",
+          "tasks": [
+            "Define severity levels for alerts",
+            "Update monitoring configurations with new classifications",
+            "Train team on new alert severity system"
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+Validating backlog structure...
+
+Epics generated: 4
+ - AKS Upgrade (4 stories)
+ - CI Pipeline Stability (3 stories)
+ - Infrastructure as Code Refactoring (2 stories)
+ - Monitoring and Observability Improvements (3 stories)
+
+Creating GitHub issues...
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/3
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/4
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/5
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/6
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/7
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/8
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/9
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/10
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/11
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/12
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/13
+Created issue: https://github.com/sundbgit/devops-ai-product-owner/issues/14
+
+MVP pipeline completed successfully
+
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % 
+
+~~~
+<img width="1434" height="753" alt="Screenshot 2026-03-22 at 1 55 44 PM" src="https://github.com/user-attachments/assets/3bdfe30c-add1-4607-ba70-911969566857" />
+
 
