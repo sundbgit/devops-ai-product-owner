@@ -18,4 +18,10 @@ sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % ls
 agents			input			models			README.md		scripts			tests
 config			integrations		prompts			requirements.txt	services
 sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner %
+
+sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % python3 -m venv venv
+sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % source venv/bin/activate
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % date
+Sun Mar 22 12:21:01 IST 2026
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % 
 ~~~
