@@ -25,3 +25,28 @@ sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % source venv/bin/activa
 Sun Mar 22 12:21:01 IST 2026
 (venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % 
 ~~~
+
+~~~
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % pip install -r requirements.txt
+Collecting openai>=1.30.0
+  Downloading openai-2.29.0-py3-none-any.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 615 kB/s 
+Collecting python-dotenv>=1.0.1
+
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % pip install --upgrade pip
+Requirement already satisfied: pip in ./venv/lib/python3.9/site-packages (21.2.4)
+Collecting pip
+  Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+     |████████████████████████████████| 1.8 MB 1.0 MB/s 
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 21.2.4
+    Uninstalling pip-21.2.4:
+      Successfully uninstalled pip-21.2.4
+Successfully installed pip-26.0.1
+(venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % 
+
+~~~
+
+After the basic setup, add an Open API key in the .env file and the model name.
+
