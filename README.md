@@ -36,10 +36,7 @@ flowchart TD
 4. GitHub API
 5. YAML Config
 
-# Demo
-
-
-# Quick Start
+# Quick Start Demo
 
 1. Clone Repo
 ~~~
@@ -299,7 +296,7 @@ MVP pipeline completed successfully
 <img width="1434" height="753" alt="Screenshot 2026-03-22 at 1 55 44 PM" src="https://github.com/user-attachments/assets/3bdfe30c-add1-4607-ba70-911969566857" />
 
 
-6. Cost Efficiency
+# Cost Efficiency
 
 * Model: gpt-4o-mini
 * Cost per run: <$0.01
