@@ -1,7 +1,44 @@
 # devops-ai-product-owner
-An AI-powered Product Owner agent for DevOps platform teams that converts technical discussions into sprint backlogs, stories, and standup summaries using LLMs.
+An AI-powered Product Owner agent for DevOps platform teams that converts meeting discussions into structured backlog items, epics, and sprint-ready stories.
 
-# Usage
+# Problem Statement
+
+DevOps/platform teams often:
+1. Don’t have a traditional Product Owner
+2. Spend time manually converting discussions into tasks
+3. Lose context from meetings
+4. Struggle with backlog prioritization
+
+# Solution
+
+This project introduces an AI Product Owner Agent that:
+1. Converts meeting notes → Epics, Stories, Tasks
+2. Structures backlog using DevOps best practices
+3. Automatically creates GitHub issues
+4. Lays foundation for sprint planning automation
+
+# Architecture
+
+```mermaid
+flowchart TD
+    A[Meeting Notes] --> B[ProductOwnerAgent]
+    B --> C[AI Service - OpenAI]
+    C --> D[Backlog - Pydantic Validation]
+    D --> E[GitHub Integration]
+    E --> F[Issues Created]
+  ```
+
+# Tech Stack
+
+1. Python
+2. OpenAI API
+3. Pydantic
+4. GitHub API
+5. YAML Config
+
+# Quick Start Demo
+
+1. Clone Repo
 ~~~
 sunilpoojary@Sunils-MacBook-Air ~ % mkdir devops-product-owner
 sunilpoojary@Sunils-MacBook-Air ~ % cd devops-product-owner 
@@ -18,15 +55,15 @@ sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % ls
 agents			input			models			README.md		scripts			tests
 config			integrations		prompts			requirements.txt	services
 sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner %
+~~~
 
+2. Setup Virtual Environment
+~~~
 sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % python3 -m venv venv
 sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % source venv/bin/activate
 (venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % date
 Sun Mar 22 12:21:01 IST 2026
 (venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % 
-~~~
-
-~~~
 (venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % pip install -r requirements.txt
 Collecting openai>=1.30.0
   Downloading openai-2.29.0-py3-none-any.whl (1.1 MB)
@@ -48,9 +85,9 @@ Successfully installed pip-26.0.1
 
 ~~~
 
-After the basic setup, add an Open API key in the .env file and the model name. 
+3. Configure .env
 
-The .env should look like. DO not check in to github. use .gitignore 
+The .env should look like. Do not check in to github. use .gitignore 
 
 ~~~
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
@@ -60,7 +97,9 @@ GITHUB_OWNER=Provide your username
 GITHUB_REPO=Provide your repo name
 ~~~
 
-To create Open API key - Navigate to https://platform.openai.com/ and Create new secret key. Keep the details as default and permissions as default which we can change later. PLease add billing details with as low as 5$ for the basic tests. We can add once you need more :)
+To create Open API key - Navigate to https://platform.openai.com/ and create new secret key. Keep the details as default and permissions as default which we can change later. Please add billing details with as low as 5$ for the basic tests. We can add once you need more :)
+
+4. Run the Application
 
 ~~~
 
@@ -251,6 +290,15 @@ MVP pipeline completed successfully
 (venv) sunilpoojary@Sunils-MacBook-Air devops-ai-product-owner % 
 
 ~~~
+
+5. Validate the issues in Github.
+   
 <img width="1434" height="753" alt="Screenshot 2026-03-22 at 1 55 44 PM" src="https://github.com/user-attachments/assets/3bdfe30c-add1-4607-ba70-911969566857" />
 
+
+# Cost Efficiency
+
+* Model: gpt-4o-mini
+* Cost per run: <$0.01
+* Suitable for frequent DevOps workflows
 
