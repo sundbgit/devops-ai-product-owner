@@ -19,18 +19,16 @@ This project introduces an AI Product Owner Agent that:
 
 # Architecture
 
-Meeting Notes (Teams / Markdown)
-        ↓
-ProductOwnerAgent
-        ↓
-AI Service (OpenAI)
-        ↓
-Backlog (Pydantic Validation)
-        ↓
-GitHub Integration
-        ↓
-Issues Created Automatically
-  
+```mermaid
+flowchart TD
+    A[Meeting Notes] --> B[ProductOwnerAgent]
+    B --> C[AI Service - OpenAI]
+    C --> D[Backlog - Pydantic Validation]
+    D --> E[GitHub Integration]
+    E --> F[Issues Created]
+  ```
+
+
 # Tech Stack
 
 1. Python
