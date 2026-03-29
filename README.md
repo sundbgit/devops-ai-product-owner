@@ -28,7 +28,6 @@ flowchart TD
     E --> F[Issues Created]
   ```
 
-
 # Tech Stack
 
 1. Python
